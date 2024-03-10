@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "cmath": "cpp",
-        "utilitarios.h": "c"
+        "utilitarios.h": "c",
+        "questao_tres.h": "c",
+        "questao_quatro.h": "c"
     }
 }
