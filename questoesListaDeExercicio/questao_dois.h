@@ -16,9 +16,6 @@ void questao_dois(){
     printf("Digite o seu nome: ");
     scanf("%254s", nomeUsuario);
 
-    printf("Seu nome e %s \n", nomeUsuario);
-    printf("O tamanho e %d \n",strlen(nomeUsuario));
-
     if (existe_digito(nomeUsuario)){
 
         limpar_tela();
@@ -31,7 +28,15 @@ void questao_dois(){
 
     }
     else if(existe_character_especial(nomeUsuario)){
-        printf("Digite o seu sem caracteres especiais");
+        
+        limpar_tela();
+
+        printf("Error! O nome nao pode conter caracteres especiais!");
+
+        sleep(2);
+
+        limpar_tela();
+
     }
     else{
         printf("Tudo ok");
