@@ -13,34 +13,39 @@
 void questao_dois(){
     char nomeUsuario[254];
 
-    printf("Digite o seu nome: ");
-    scanf("%254s", nomeUsuario);
+    while(true){
+        printf("Digite o seu nome: ");
+        scanf("%254s", nomeUsuario);
 
-    if (existe_digito(nomeUsuario)){
+        if (existe_digito(nomeUsuario)){
 
-        limpar_tela();
+            limpar_tela();
 
-        printf("Error! O nome nao pode conter numeros!");
+            printf("Error! O nome nao pode conter numeros!");
 
-        sleep(2);
+            sleep(2);
 
-        limpar_tela();
+            limpar_tela();
 
+        }
+        else if(existe_character_especial(nomeUsuario)){
+            
+            limpar_tela();
+
+            printf("Error! O nome nao pode conter caracteres especiais!");
+
+            sleep(2);
+
+            limpar_tela();
+
+        }
+        else{
+            break;
+        }
     }
-    else if(existe_character_especial(nomeUsuario)){
-        
-        limpar_tela();
 
-        printf("Error! O nome nao pode conter caracteres especiais!");
+    printf("Ola %s, e um prazer lhe conhecer", nomeUsuario);
 
-        sleep(2);
-
-        limpar_tela();
-
-    }
-    else{
-        printf("Tudo ok");
-    }
 }
 
 #endif
