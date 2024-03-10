@@ -7,9 +7,9 @@
 
 int main(){
     
-    ResolucaoListaExercicio resolucaoListaExercicio = {&questao_um,&questao_dois};
+    ResolucaoListaExercicio resolucaoListaExercicio = {&questao_um,&resolucao_questao_dois};
 
-    resolucaoListaExercicio.questao_dois();
+    resolucaoListaExercicio.resolucao_questao_dois();
 
     return 0;
 }

@@ -4,7 +4,7 @@
 typedef struct
 {
     void (*questao_um)(); // Resolução Questão um
-    void (*questao_dois)(); //Resolução questão dois
+    void (*resolucao_questao_dois)(); //Resolução questão dois
 } ResolucaoListaExercicio;
 
 #endif
