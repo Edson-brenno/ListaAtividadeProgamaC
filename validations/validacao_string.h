@@ -14,10 +14,14 @@ bool existe_digito(char *texto){ //Verifica se contém números na string; Check
 
     for (int c = 0; c < strlen(texto); c++){
         if (isdigit(texto[c])){
+
+            free(texto);
+
             return true;
         }
     }
 
+    free(texto);
     return false;
 
 }
@@ -31,6 +35,8 @@ bool existe_character_especial(char *texto){ // Verifica se contém caracteres e
         }
     }
 
+    free(texto);
+    
     return false;
 }
 #endif

@@ -40,6 +40,7 @@ void resolucao_questao_dois(){
     printf("=============================================\n");
     printf("Ola %s, prazer em lhe conhecer", nomeUsuario);
 
+
 }
 
 #endif
