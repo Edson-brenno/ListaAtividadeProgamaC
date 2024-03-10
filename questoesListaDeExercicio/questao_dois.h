@@ -3,7 +3,6 @@
 
 #include <stdio.h>
 #include <errno.h>
-#include <stdio.h>
 #include <unistd.h>
 #include "../validations/validacao_string.h"
 #include "../utilitario/utilitarios.h"
