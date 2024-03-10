@@ -59,5 +59,7 @@ void resolucao_questao_tres(){
     }
     
     printf("O funcionario %s, vai receber %.2lf no mes de abril\n", nomeFuncionario, *ponteiroSalarioFuncionario);  
+
+    free(ponteiroSalarioFuncionario);
 }
 #endif
