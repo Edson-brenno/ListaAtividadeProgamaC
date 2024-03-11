@@ -5,6 +5,16 @@
 #include <Windows.h>
 #include <unistd.h>
 #include <stdbool.h>
+
+#include "lista_exercicio.h"
+#include "questoesListaDeExercicio/questao_um.h"
+#include "questoesListaDeExercicio/questao_dois.h"
+#include "questoesListaDeExercicio/questao_tres.h"
+#include "questoesListaDeExercicio/questao_quatro.h"
+#include "questoesListaDeExercicio/questao_cinco.h"
+#include "questoesListaDeExercicio/questao_seis.h"
+#include "questoesListaDeExercicio/questao_sete.h"
+
 #include "utilitario/utilitarios.h"
 
 
@@ -60,9 +70,68 @@ void mostra_mensagem_error_menu(){
     limpar_tela();
 }
 
+void mostra_opcao_selecionada(int *opcaoMenuSelecionada){
+
+    ResolucaoListaExercicio listaExercicio = {questao_um, resolucao_questao_dois, resolucao_questao_tres, 
+    resolucao_questao_quatro, resolucao_questao_cinco, resolucao_questao_seis, resolucao_questao_sete };
+
+    switch (*opcaoMenuSelecionada)
+    {
+    case 1:
+        
+        listaExercicio.questao_um();
+
+        break;
+    
+    case 2:
+
+        listaExercicio.resolucao_questao_dois();
+
+        break;
+
+    case 3:
+
+        listaExercicio.resolucao_questao_tres();
+
+        break;
+    
+    case 4:
+
+        listaExercicio.resolucao_questao_quatro();
+
+        break;
+    
+    case 5:
+
+        listaExercicio.resolucao_questao_cinco();
+
+        break;
+
+    case 6:
+
+        listaExercicio.resolucao_questao_seis();
+
+        break;
+
+    case 7:
+
+        listaExercicio.resolucao_questao_sete();
+
+        break;
+
+    default:
+
+        printf("Tchau :)");
+
+        break;
+    }
+}
+
 void roda_menu(){
 
     int opcaoMenu;
+
+    
 
     while(true){
 
@@ -79,6 +148,8 @@ void roda_menu(){
         }
     }
 
+    printf("====================================================\n");
     
+    mostra_opcao_selecionada(&opcaoMenu);
 }
 #endif

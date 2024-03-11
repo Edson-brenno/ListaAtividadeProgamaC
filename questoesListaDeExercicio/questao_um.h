@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 void questao_um(){
-    printf("olá mundo");
+    printf("ola mundo");
 }
 
 #endif
