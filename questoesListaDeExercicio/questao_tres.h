@@ -29,12 +29,19 @@ void pergunta_nome_funcionario(char *variavelNomeFuncionario){
 void pergunta_salario_funcionario(double *variavelSalarioFuncionario){
     while(true){// while para perguntar o salario do funcinario; while to ask the emplooye salary
         
-        printf("Digite o seu salário do funcionario: ");
+        int isNotAValidINput = 0;
+
+        printf("Digite o salario do funcionario: ");
 
         if(scanf("%lf", variavelSalarioFuncionario) != 1){ // verifica se a resposta não é double; check if the answer is not double
             
+            isNotAValidINput = 1;
+
             limpa_input_buffer(); //Limpa o input buffer; Clear the input buffer
 
+        }
+
+        if(isNotAValidINput == 1){
             limpar_tela(); // limpa tela; clear the screen
 
             printf("Error! O salario do funcionario tem ser um numero!\n");// Mostra error; Shows the error
