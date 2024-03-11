@@ -18,13 +18,13 @@
 #include "utilitario/utilitarios.h"
 
 
-void mostra_nome_menu(){
+void mostra_nome_menu(){ // Mostra nome Menu; Show menu's name
     printf("===================================================\n");
     printf("Resolucao Lista de Exercicio \n");
     printf("====================================================\n");
 }
 
-void mostra_opcoes_menu(){
+void mostra_opcoes_menu(){ // Mostra menu opcao; Show menu's options
     printf("[1] Resolucao Questao Um \n");
     printf("[2] Resolucao Questao dois \n");
     printf("[3] Resolucao Questao tres \n");
@@ -36,7 +36,7 @@ void mostra_opcoes_menu(){
     printf("====================================================\n");
 }
 
-bool pergunta_e_valida_opcao_menu_escolhida(int *variavelOpcaoMenu){
+bool pergunta_e_valida_opcao_menu_escolhida(int *variavelOpcaoMenu){ // Pergunta e valida opcao menu; Ask and verify the menu's option
     
     int isNotAValidOption = 0;
 
@@ -58,7 +58,7 @@ bool pergunta_e_valida_opcao_menu_escolhida(int *variavelOpcaoMenu){
     }
 }
 
-void mostra_mensagem_error_menu(){
+void mostra_mensagem_error_menu(){ // Mostra mensagem de error; Show's error mensage
     limpar_tela();
 
     printf("====================================================\n");
@@ -70,7 +70,7 @@ void mostra_mensagem_error_menu(){
     limpar_tela();
 }
 
-void mostra_opcao_selecionada(int *opcaoMenuSelecionada){
+void mostra_opcao_selecionada(int *opcaoMenuSelecionada){ //Executa opcao selecionada; execute the selected option
 
     ResolucaoListaExercicio listaExercicio = {questao_um, resolucao_questao_dois, resolucao_questao_tres, 
     resolucao_questao_quatro, resolucao_questao_cinco, resolucao_questao_seis, resolucao_questao_sete };
@@ -127,11 +127,9 @@ void mostra_opcao_selecionada(int *opcaoMenuSelecionada){
     }
 }
 
-void roda_menu(){
+void roda_menu(){ // Run Menu
 
     int opcaoMenu;
-
-    
 
     while(true){
 
@@ -149,7 +147,7 @@ void roda_menu(){
     }
 
     printf("====================================================\n");
-    
+
     mostra_opcao_selecionada(&opcaoMenu);
 }
 #endif
