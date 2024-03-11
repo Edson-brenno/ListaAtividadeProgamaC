@@ -15,7 +15,7 @@ int main(){
     ResolucaoListaExercicio resolucaoListaExercicio = {&questao_um,&resolucao_questao_dois,&resolucao_questao_tres,
     &resolucao_questao_quatro, &resolucao_questao_cinco, &resolucao_questao_seis, &resolucao_questao_sete};
 
-    resolucaoListaExercicio.resolucao_questao_cinco();
+    resolucaoListaExercicio.resolucao_questao_tres();
 
     return 0;
 }
